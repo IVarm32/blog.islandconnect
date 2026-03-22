@@ -1,0 +1,12 @@
+{
+  "name": "island-connect-ai",
+  "version": "1.0.0",
+  "description": "Island Connect AI - Jamaican Real Estate & Tourism AI Blog",
+  "private": true,
+  "scripts": {
+    "start": "npx serve .",
+    "build": "echo 'Static site - no build step required'"
+  },
+  "keywords": ["jamaica", "real-estate", "tourism", "ai"],
+  "license": "MIT"
+}
