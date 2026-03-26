@@ -2,18 +2,11 @@
 > island-connect-ai@1.0.0 start
 > npx serve .
 
+npm warn exec The following package was not found and will be installed: serve@14.2.6
  INFO  Accepting connections at http://localhost:3000
- HTTP  3/25/2026 12:16:09 AM ::1 GET /
- HTTP  3/25/2026 12:16:09 AM ::1 Returned 200 in 41 ms
- HTTP  3/25/2026 12:16:09 AM ::1 GET /css/style.css
- HTTP  3/25/2026 12:16:09 AM ::1 Returned 200 in 7 ms
- HTTP  3/25/2026 12:16:10 AM ::1 GET /js/main.js
- HTTP  3/25/2026 12:16:10 AM ::1 Returned 200 in 8 ms
- HTTP  3/25/2026 12:16:16 AM ::1 GET /blog-post-ai-property-matching-jamaica.html
- HTTP  3/25/2026 12:16:16 AM ::1 Returned 301 in 1 ms
- HTTP  3/25/2026 12:16:16 AM ::1 GET /blog-post-ai-property-matching-jamaica
- HTTP  3/25/2026 12:16:16 AM ::1 Returned 200 in 2 ms
- HTTP  3/25/2026 12:16:16 AM ::1 GET /css/style.css
- HTTP  3/25/2026 12:16:16 AM ::1 Returned 304 in 1 ms
-
- INFO  Gracefully shutting down. Please wait...
+ HTTP  3/26/2026 12:07:49 AM ::1 GET /
+ HTTP  3/26/2026 12:07:49 AM ::1 Returned 200 in 352 ms
+ HTTP  3/26/2026 12:07:49 AM ::1 GET /css/style.css
+ HTTP  3/26/2026 12:07:49 AM ::1 Returned 200 in 5 ms
+ HTTP  3/26/2026 12:07:50 AM ::1 GET /js/main.js
+ HTTP  3/26/2026 12:07:50 AM ::1 Returned 200 in 3 ms
