@@ -14,7 +14,13 @@ function scrollToSection(sectionId) {
 // Mobile menu toggle
 function toggleMobileMenu() {
     const mobileMenu = document.getElementById('mobile-menu');
-    mobileMenu.classList.toggle('hidden');
+    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+
+    if (mobileMenu && mobileMenuBtn) {
+        const isHidden = mobileMenu.classList.contains('hidden');
+        mobileMenu.classList.toggle('hidden');
+        mobileMenuBtn.setAttribute('aria-expanded', isHidden ? 'true' : 'false');
+    }
 }
 
 // Contact modal functions

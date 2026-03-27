@@ -357,3 +357,19 @@ html {
 .blog-grid {
     @apply grid md:grid-cols-2 lg:grid-cols-3 gap-8;
 }
+/* Enhanced Brand Polish - Gold Glow on Hover */
+.blog-card:hover,
+.card-hover:hover,
+article.bg-white:hover {
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04), 0 0 15px rgba(254, 209, 0, 0.4);
+    transform: translateY(-8px);
+}
+
+/* Subtle lift for buttons with brand glow */
+button.bg-yellow-500:hover,
+button.bg-green-600:hover,
+.btn-jamaican-green:hover,
+.btn-jamaican-gold:hover {
+    box-shadow: 0 4px 14px 0 rgba(254, 209, 0, 0.39);
+    transform: scale(1.02);
+}

@@ -80,7 +80,7 @@
                     <a href="index.html#blog" class="text-gray-700 hover:text-green-600 transition-colors font-medium">Blog</a>
                     <a href="index.html#contact" class="text-gray-700 hover:text-green-600 transition-colors font-medium">Contact</a>
                 </div>
-                <button id="mobile-menu-btn" class="md:hidden text-black" aria-label="Toggle mobile menu">
+                <button id="mobile-menu-btn" aria-expanded="false" aria-controls="mobile-menu" class="md:hidden text-black" aria-label="Toggle mobile menu">
                     <i class="fas fa-bars text-xl"></i>
                 </button>
             </div>
@@ -237,6 +237,8 @@
         // Mobile menu toggle
         document.getElementById('mobile-menu-btn').addEventListener('click', function() {
             const mobileMenu = document.getElementById('mobile-menu');
+            const isExpanded = this.getAttribute('aria-expanded') === 'true';
+            this.setAttribute('aria-expanded', !isExpanded);
             mobileMenu.classList.toggle('hidden');
         });
 
