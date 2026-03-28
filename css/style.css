@@ -373,3 +373,41 @@ button.bg-green-600:hover,
     box-shadow: 0 4px 14px 0 rgba(254, 209, 0, 0.39);
     transform: scale(1.02);
 }
+
+/* Smooth Zoom Interaction for Blog Images */
+.smooth-zoom-container {
+    overflow: hidden;
+    border-radius: 1rem;
+    position: relative;
+}
+
+.smooth-zoom-image {
+    transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.smooth-zoom-container:hover .smooth-zoom-image {
+    transform: scale(1.08);
+}
+
+/* Tooltip for hover hint */
+.smooth-zoom-container::after {
+    content: 'View Post Image';
+    position: absolute;
+    bottom: 1rem;
+    right: 1rem;
+    background: rgba(0, 0, 0, 0.6);
+    color: var(--jamaican-gold);
+    padding: 0.25rem 0.75rem;
+    border-radius: 9999px;
+    font-size: 0.75rem;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+}
+
+.smooth-zoom-container:hover::after {
+    opacity: 1;
+}
