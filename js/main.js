@@ -14,7 +14,13 @@ function scrollToSection(sectionId) {
 // Mobile menu toggle
 function toggleMobileMenu() {
     const mobileMenu = document.getElementById('mobile-menu');
-    mobileMenu.classList.toggle('hidden');
+    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+
+    if (mobileMenu && mobileMenuBtn) {
+        const isHidden = mobileMenu.classList.contains('hidden');
+        mobileMenu.classList.toggle('hidden');
+        mobileMenuBtn.setAttribute('aria-expanded', isHidden ? 'true' : 'false');
+    }
 }
 
 // Contact modal functions
@@ -30,32 +36,30 @@ function closeContactModal() {
     document.body.style.overflow = 'auto';
 }
 
-// Initialize charts when DOM is loaded
+// Initialize when DOM is loaded
 document.addEventListener('DOMContentLoaded', function() {
-    // Initialize mobile menu button
+    // Mobile menu button
     const mobileMenuBtn = document.getElementById('mobile-menu-btn');
     if (mobileMenuBtn) {
         mobileMenuBtn.addEventListener('click', toggleMobileMenu);
     }
 
-    // Initialize charts
+    // Charts
     initializeCharts();
     
-    // Initialize contact form
+    // Contact form
     initializeContactForm();
     
-    // Add scroll effects
+    // Scroll effects
     initializeScrollEffects();
     
-    // Blog functionality removed - links work normally now
-    // initializeBlogFunctionality();
+    // Reading Progress
+    initializeReadingProgress();
 });
 
 // Initialize all charts
 function initializeCharts() {
-    // Wait for DOM to be fully loaded
     setTimeout(() => {
-        // Real Estate Impact Chart
         const realEstateCtx = document.getElementById('realEstateChart');
         if (realEstateCtx) {
             new Chart(realEstateCtx, {
@@ -80,22 +84,13 @@ function initializeCharts() {
                 responsive: true,
                 maintainAspectRatio: false,
                 plugins: {
-                    title: {
-                        display: true,
-                        text: 'Real Estate AI Impact Comparison'
-                    }
+                    title: { display: true, text: 'Real Estate AI Impact Comparison' }
                 },
-                scales: {
-                    y: {
-                        beginAtZero: true,
-                        max: 100
-                    }
-                }
+                scales: { y: { beginAtZero: true, max: 100 } }
             }
         });
     }
 
-    // Tourism Impact Chart
     const tourismCtx = document.getElementById('tourismChart');
     if (tourismCtx) {
         new Chart(tourismCtx, {
@@ -120,58 +115,78 @@ function initializeCharts() {
                 responsive: true,
                 maintainAspectRatio: false,
                 plugins: {
-                    title: {
-                        display: true,
-                        text: 'Tourism AI Implementation Results'
-                    }
+                    title: { display: true, text: 'Tourism AI Implementation Results' }
                 }
             }
         });
     }
-
-
-    }, 1000); // 1 second delay to ensure DOM is ready
+    }, 1000);
 }
 
-// Initialize contact form
+// Initialize contact form with polished feedback
 function initializeContactForm() {
     const contactForm = document.getElementById('contact-form');
     if (contactForm) {
         contactForm.addEventListener('submit', function(e) {
             e.preventDefault();
             
-            // Get form data
-            const formData = new FormData(contactForm);
-            const data = Object.fromEntries(formData);
-            
-            // Simulate form submission
             const submitButton = contactForm.querySelector('button[type="submit"]');
             const originalText = submitButton.textContent;
             
-            // Show loading state
             submitButton.textContent = 'Sending...';
             submitButton.disabled = true;
             
             // Simulate API call
             setTimeout(() => {
-                // Show success message
-                alert('Thank you for your message! We\'ll get back to you soon.');
+                showFormSuccess(contactForm);
                 
-                // Reset form
-                contactForm.reset();
-                closeContactModal();
-                
-                // Reset button
-                submitButton.textContent = originalText;
-                submitButton.disabled = false;
-            }, 2000);
+                setTimeout(() => {
+                    contactForm.reset();
+                    closeContactModal();
+                    submitButton.textContent = originalText;
+                    submitButton.disabled = false;
+                    // Remove success message after modal close
+                    const msg = document.getElementById('form-success-msg');
+                    if (msg) msg.remove();
+                }, 3000);
+            }, 1500);
         });
     }
 }
 
+function showFormSuccess(form) {
+    const successMsg = document.createElement('div');
+    successMsg.id = 'form-success-msg';
+    successMsg.className = 'mt-4 p-4 rounded-lg bg-green-100 border border-green-500 text-green-700 font-semibold animate-fade-in';
+    successMsg.innerHTML = '<div class="flex items-center"><i class="fas fa-check-circle mr-2 text-xl"></i> Message sent successfully! We will contact you soon.</div>';
+
+    form.parentNode.insertBefore(successMsg, form.nextSibling);
+}
+
+// Reading Progress Indicator
+function initializeReadingProgress() {
+    const progressBar = document.createElement('div');
+    progressBar.id = 'reading-progress-bar';
+    progressBar.style.position = 'fixed';
+    progressBar.style.top = '0';
+    progressBar.style.left = '0';
+    progressBar.style.height = '4px';
+    progressBar.style.backgroundColor = '#FED100'; // Jamaican Gold
+    progressBar.style.zIndex = '9999';
+    progressBar.style.transition = 'width 0.2s ease';
+    progressBar.style.width = '0%';
+    document.body.appendChild(progressBar);
+
+    window.addEventListener('scroll', function() {
+        const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+        const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+        const scrolled = (winScroll / height) * 100;
+        document.getElementById('reading-progress-bar').style.width = scrolled + '%';
+    });
+}
+
 // Initialize scroll effects
 function initializeScrollEffects() {
-    // Add scroll spy functionality
     const sections = document.querySelectorAll('section[id]');
     const navLinks = document.querySelectorAll('.nav-link');
 
@@ -179,72 +194,41 @@ function initializeScrollEffects() {
         let current = '';
         sections.forEach(section => {
             const sectionTop = section.offsetTop;
-            const sectionHeight = section.clientHeight;
             if (scrollY >= (sectionTop - 200)) {
                 current = section.getAttribute('id');
             }
         });
 
         navLinks.forEach(link => {
-            link.classList.remove('text-indigo-600', 'font-semibold');
-            if (link.getAttribute('href') === `#${current}`) {
-                link.classList.add('text-indigo-600', 'font-semibold');
+            link.classList.remove('text-green-400', 'font-semibold');
+            if (link.getAttribute('href') === '#' + current || link.getAttribute('href') === 'index.html#' + current) {
+                link.classList.add('text-green-400', 'font-semibold');
             }
         });
     }
 
     window.addEventListener('scroll', updateActiveLink);
     
-    // Add scroll reveal animation
-    const observerOptions = {
-        threshold: 0.1,
-        rootMargin: '0px 0px -50px 0px'
-    };
-
+    const observerOptions = { threshold: 0.1, rootMargin: '0px 0px -50px 0px' };
     const observer = new IntersectionObserver(function(entries) {
         entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('animate-fade-in');
-            }
+            if (entry.isIntersecting) entry.target.classList.add('animate-fade-in');
         });
     }, observerOptions);
 
-    // Observe all sections
-    sections.forEach(section => {
-        observer.observe(section);
-    });
+    sections.forEach(section => observer.observe(section));
 }
 
 // Close modal on escape key
 document.addEventListener('keydown', function(e) {
-    if (e.key === 'Escape') {
-        closeContactModal();
-    }
+    if (e.key === 'Escape') closeContactModal();
 });
 
 // Close modal on backdrop click
 document.addEventListener('click', function(e) {
     const modal = document.getElementById('contact-modal');
-    if (e.target === modal) {
-        closeContactModal();
-    }
+    if (e.target === modal) closeContactModal();
 });
-
-// Initialize mobile menu close on link click
-document.addEventListener('DOMContentLoaded', function() {
-    const mobileLinks = document.querySelectorAll('#mobile-menu .nav-link');
-    mobileLinks.forEach(link => {
-        link.addEventListener('click', function() {
-            document.getElementById('mobile-menu').classList.add('hidden');
-        });
-    });
-});
-
-// Blog filtering functionality
-function initializeBlogFiltering() {
-    // This could be extended to filter blog posts by category
-    console.log('Blog filtering initialized - ready for category filtering feature');
-}
 
 // Export functions for global use
 window.scrollToSection = scrollToSection;
