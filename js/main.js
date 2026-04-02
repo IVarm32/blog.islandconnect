@@ -23,19 +23,6 @@ function toggleMobileMenu() {
     }
 }
 
-// Contact modal functions
-function openContactModal() {
-    const modal = document.getElementById('contact-modal');
-    modal.classList.remove('hidden');
-    document.body.style.overflow = 'hidden';
-}
-
-function closeContactModal() {
-    const modal = document.getElementById('contact-modal');
-    modal.classList.add('hidden');
-    document.body.style.overflow = 'auto';
-}
-
 // Initialize when DOM is loaded
 document.addEventListener('DOMContentLoaded', function() {
     // Mobile menu button
@@ -46,12 +33,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Charts
     initializeCharts();
-    
-    // Contact form
-    initializeContactForm();
-    
-    // Scroll effects
-    initializeScrollEffects();
     
     // Reading Progress
     initializeReadingProgress();
@@ -123,46 +104,6 @@ function initializeCharts() {
     }, 1000);
 }
 
-// Initialize contact form with polished feedback
-function initializeContactForm() {
-    const contactForm = document.getElementById('contact-form');
-    if (contactForm) {
-        contactForm.addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            const submitButton = contactForm.querySelector('button[type="submit"]');
-            const originalText = submitButton.textContent;
-            
-            submitButton.textContent = 'Sending...';
-            submitButton.disabled = true;
-            
-            // Simulate API call
-            setTimeout(() => {
-                showFormSuccess(contactForm);
-                
-                setTimeout(() => {
-                    contactForm.reset();
-                    closeContactModal();
-                    submitButton.textContent = originalText;
-                    submitButton.disabled = false;
-                    // Remove success message after modal close
-                    const msg = document.getElementById('form-success-msg');
-                    if (msg) msg.remove();
-                }, 3000);
-            }, 1500);
-        });
-    }
-}
-
-function showFormSuccess(form) {
-    const successMsg = document.createElement('div');
-    successMsg.id = 'form-success-msg';
-    successMsg.className = 'mt-4 p-4 rounded-lg bg-green-100 border border-green-500 text-green-700 font-semibold animate-fade-in';
-    successMsg.innerHTML = '<div class="flex items-center"><i class="fas fa-check-circle mr-2 text-xl"></i> Message sent successfully! We will contact you soon.</div>';
-
-    form.parentNode.insertBefore(successMsg, form.nextSibling);
-}
-
 // Reading Progress Indicator
 function initializeReadingProgress() {
     const progressBar = document.createElement('div');
@@ -219,18 +160,5 @@ function initializeScrollEffects() {
     sections.forEach(section => observer.observe(section));
 }
 
-// Close modal on escape key
-document.addEventListener('keydown', function(e) {
-    if (e.key === 'Escape') closeContactModal();
-});
-
-// Close modal on backdrop click
-document.addEventListener('click', function(e) {
-    const modal = document.getElementById('contact-modal');
-    if (e.target === modal) closeContactModal();
-});
-
 // Export functions for global use
 window.scrollToSection = scrollToSection;
-window.openContactModal = openContactModal;
-window.closeContactModal = closeContactModal;
