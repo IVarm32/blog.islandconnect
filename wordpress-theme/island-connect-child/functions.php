@@ -22,7 +22,7 @@ function island_connect_child_widgets_init() {
         'name'          => __( 'Footer Area 1', 'island-connect-child' ),
         'id'            => 'footer-1',
         'description'   => __( 'Widgets in this area will be shown in the footer.', 'island-connect-child' ),
-        'before_widget' => '<div id="%1" class="widget %2">',
+        'before_widget' => '<div id="%1$s" class="widget %2$s">',
         'after_widget'  => '</div>',
         'before_title'  => '<h4 class="font-semibold mb-4">',
         'after_title'   => '</h4>',
