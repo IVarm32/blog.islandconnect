@@ -5,9 +5,14 @@
   "private": true,
   "scripts": {
     "start": "npx serve .",
-    "deploy": "pnpm wrangler deploy",
+    "deploy": "pnpm wrangler pages deploy .",
     "build": "echo 'Static site - no build step required'"
   },
-  "keywords": ["jamaica", "real-estate", "tourism", "ai"],
+  "keywords": [
+    "jamaica",
+    "real-estate",
+    "tourism",
+    "ai"
+  ],
   "license": "MIT"
 }
