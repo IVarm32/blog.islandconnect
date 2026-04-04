@@ -21,14 +21,6 @@
                         <div class="text-2xl font-bold text-yellow-400">Island Connect AI</div>
                     </a>
                 </div>
-                <div class="hidden lg:flex space-x-6">
-                    <a href="#blog" class="nav-link text-yellow-400">Blog</a>
-                    <a href="#introduction" class="nav-link text-yellow-400">Introduction</a>
-                    <a href="#real-estate" class="nav-link text-yellow-400">Real Estate</a>
-                    <a href="#tourism" class="nav-link text-yellow-400">Tourism</a>
-                    <a href="#case-studies" class="nav-link text-yellow-400">Case Studies</a>
-                    <a href="#future" class="nav-link text-yellow-400">Future</a>
-                </div>
             </div>
         </div>
     </nav>
