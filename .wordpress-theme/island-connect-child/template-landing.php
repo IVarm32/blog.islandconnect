@@ -1,0 +1,699 @@
+<?php
+/**
+ * Template Name: Island Connect Landing Page
+ */
+get_header(); ?>
+<main id="site-main" class="site-main">
+    <?php if (have_posts()) : while (have_posts()) : the_post(); the_content(); endwhile; endif; ?>
+    <!-- Hero Section -->
+    <section class="relative overflow-hidden bg-gradient-to-r from-green-800 via-yellow-500 to-black text-white py-20">
+        <div class="absolute inset-0 bg-black/20"></div>
+        <div class="container mx-auto px-4 relative z-10">
+            <div class="max-w-4xl mx-auto text-center">
+                <h1 class="text-5xl md:text-7xl font-bold mb-6 animate-fade-in">AI Agents Are Revolutionizing
+                    <span class="text-yellow-300">Real Estate & Tourism</span>
+                </h1>
+                <p class="text-xl md:text-2xl mb-8 opacity-90">
+                    How smart websites and intelligent automation are transforming property management and travel experiences
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="https://islandconnect.fillout.com/getstared" target="_blank" class="bg-yellow-500 text-black px-8 py-4 rounded-full font-semibold hover:bg-yellow-400 transition-all transform hover:scale-105 flex items-center justify-center">Get Started</a>
+                    <button onclick="scrollToSection('case-studies')" class="border-2 border-yellow-500 text-yellow-400 px-8 py-4 rounded-full font-semibold hover:bg-yellow-500 hover:text-black transition-all">
+                        View Case Studies
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Floating particles effect -->
+        <div class="absolute inset-0 overflow-hidden">
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+        </div>
+    </section>
+
+    <!-- Blog Section -->
+    <section id="blog" class="py-20 bg-gradient-to-br from-green-50 to-yellow-100">
+        <div class="container mx-auto px-4">
+            <div class="max-w-6xl mx-auto">
+                <div class="text-center mb-16">
+                    <h2 class="text-4xl font-bold text-black mb-6">Latest Blog Posts</h2>
+                    <p class="text-xl text-gray-700 max-w-3xl mx-auto">
+                        Discover how AI is transforming Jamaican real estate and tourism through our latest insights and case studies.
+                    </p>
+                </div>
+
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Blog Card: Innovative Smart Tourism -->
+                    <article class="bg-white rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
+                        <div class="smooth-zoom-container relative h-48 overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1590523277543-a94d2e4eb00b?auto=format&fit=crop&w=1200&q=80" alt="Smart Tourism Jamaica" class="smooth-zoom-image w-full h-full object-cover">
+                            <div class="absolute top-4 left-4 bg-yellow-500 text-black px-3 py-1 rounded-full text-sm font-semibold">
+                                Tourism
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-black mb-3">Innovative Smart Tourism Strategies in Jamaica</h3>
+                            <p class="text-gray-600 mb-4 leading-relaxed">
+                                Explore Jamaica's future with innovative smart tourism strategies. Learn how AI, digital transformation, and sustainable practices are reshaping travel.
+                            </p>
+                            <div class="flex justify-between items-center">
+                                <span class="text-sm text-gray-500">April 12, 2024</span>
+                                <a href="blog-post-innovative-tourism-strategies.html" class="bg-yellow-500 text-black px-4 py-2 rounded-full hover:bg-yellow-400 transition-colors font-semibold">Read More</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Blog Card 1 -->
+                    <article class="bg-white rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
+                        <div class="smooth-zoom-container relative h-48 overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1613490493576-7fde63acd811?auto=format&fit=crop&w=1200&q=80" alt="Jamaican Luxury Villa" class="smooth-zoom-image w-full h-full object-cover"loading="lazy">
+                            <div class="absolute top-4 left-4 bg-green-600 text-white px-3 py-1 rounded-full text-sm font-semibold">
+                                Real Estate
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-black mb-3">AI-Powered Property Matching in Jamaica</h3>
+                            <p class="text-gray-600 mb-4 leading-relaxed">
+                                Discover how our AI agents are revolutionizing property searches across Montego Bay, Kingston, and Ocho Rios with intelligent matching algorithms.
+                            </p>
+                            <div class="flex justify-between items-center">
+                                <span class="text-sm text-gray-500">March 22, 2024</span>
+                                <a href="blog-post-ai-property-matching.html" class="bg-green-600 text-white px-4 py-2 rounded-full hover:bg-green-700 transition-colors font-semibold">Read More</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Blog Card 2 -->
+                    <article class="bg-white rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
+                        <div class="smooth-zoom-container relative h-48 overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1590523277543-a94d2e4eb00b?auto=format&fit=crop&w=1200&q=80" alt="Jamaican Beach Resort" class="smooth-zoom-image w-full h-full object-cover"loading="lazy">
+                            <div class="absolute top-4 left-4 bg-yellow-500 text-black px-3 py-1 rounded-full text-sm font-semibold">
+                                Tourism
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-black mb-3">Smart Tourism in Jamaica</h3>
+                            <p class="text-gray-600 mb-4 leading-relaxed">
+                                From Negril's beaches to Dunn's River Falls, see how AI is creating personalized experiences for visitors.
+                            </p>
+                            <div class="flex justify-between items-center">
+                                <span class="text-sm text-gray-500">March 20, 2024</span>
+                                <a href="blog-post-smart-tourism.html" class="bg-yellow-500 text-black px-4 py-2 rounded-full hover:bg-yellow-400 transition-colors font-semibold" aria-label="Read more about Smart Tourism in Jamaica">Read More</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Blog Card 3 -->
+                    <article class="bg-white rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
+                        <div class="smooth-zoom-container relative h-48 overflow-hidden">
+                            <img src="https://sspark.genspark.ai/cfimages?u1=v0ia9eh0iAYQCzb67b0H1%2F8LKLdAmkvOx0%2BAcoHNfuzqlczjE5GAETG4ynhcib8Dtx12hyogU9ijI8Ck5cpkjqVqg%2BBa4XJ5Pn4d9Wa4F9SQCjYyGrUop2Ew7juyCBdsRyKFbUXJbWZEMMmzwWRlvyXD5KfQ5x6Kz7B8O2M%3D&u2=%2BiC3TDDpG3T%2B3Rbp&width=2560" alt="Jamaican AI Technology" class="smooth-zoom-image w-full h-full object-cover"loading="lazy">
+                            <div class="absolute top-4 left-4 bg-black text-yellow-400 px-3 py-1 rounded-full text-sm font-semibold">
+                                Technology
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-black mb-3">Jamaican AI Revolution</h3>
+                            <p class="text-gray-600 mb-4 leading-relaxed">
+                                How Kingston's tech scene is leading the Caribbean AI revolution with smart websites and intelligent automation.
+                            </p>
+                            <div class="flex justify-between items-center">
+                                <span class="text-sm text-gray-500">March 18, 2024</span>
+                                <a href="blog-post-ai-revolution.html" class="bg-black text-yellow-400 px-4 py-2 rounded-full hover:bg-gray-800 transition-colors font-semibold">Read More</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Blog Card 4 -->
+                    <article class="bg-white rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
+                        <div class="smooth-zoom-container relative h-48 overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=1200&q=80" alt="Luxury Jamaican Property" class="smooth-zoom-image w-full h-full object-cover"loading="lazy">
+                            <div class="absolute top-4 left-4 bg-green-600 text-white px-3 py-1 rounded-full text-sm font-semibold">
+                                Luxury
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-black mb-3">Luxury Property AI in Jamaica</h3>
+                            <p class="text-gray-600 mb-4 leading-relaxed">
+                                Explore how AI is transforming luxury property sales in exclusive areas like Tryall Club and Round Hill.
+                            </p>
+                            <div class="flex justify-between items-center">
+                                <span class="text-sm text-gray-500">March 15, 2024</span>
+                                <a href="blog-post-luxury-properties.html" class="bg-green-600 text-white px-4 py-2 rounded-full hover:bg-green-700 transition-colors font-semibold inline-block">Read More</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Blog Card 5 -->
+                    <article class="bg-white rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
+                        <div class="smooth-zoom-container relative h-48 overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1533105079780-92b9be482077?auto=format&fit=crop&w=1200&q=80" alt="Jamaican Tourism Recovery" class="smooth-zoom-image w-full h-full object-cover"loading="lazy">
+                            <div class="absolute top-4 left-4 bg-yellow-500 text-black px-3 py-1 rounded-full text-sm font-semibold">
+                                Recovery
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-black mb-3">Jamaican Tourism Recovery</h3>
+                            <p class="text-gray-600 mb-4 leading-relaxed">
+                                How AI helped Jamaica's tourism industry recover and exceed pre-pandemic levels with smart booking systems.
+                            </p>
+                            <div class="flex justify-between items-center">
+                                <span class="text-sm text-gray-500">March 12, 2024</span>
+                                <a href="blog-post-tourism-recovery.html" class="bg-yellow-500 text-black px-4 py-2 rounded-full hover:bg-yellow-400 transition-colors font-semibold" aria-label="Read more about Jamaican Tourism Recovery">Read More</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Blog Card 6 -->
+                    <article class="bg-white rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
+                        <div class="smooth-zoom-container relative h-48 overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1200&q=80" alt="Jamaican Market Analysis" class="smooth-zoom-image w-full h-full object-cover"loading="lazy">
+                            <div class="absolute top-4 left-4 bg-black text-yellow-400 px-3 py-1 rounded-full text-sm font-semibold">
+                                Analysis
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-black mb-3">Jamaican Market Analysis</h3>
+                            <p class="text-gray-600 mb-4 leading-relaxed">
+                                Deep dive into how AI analytics are providing unprecedented insights into Jamaican real estate trends.
+                            </p>
+                            <div class="flex justify-between items-center">
+                                <span class="text-sm text-gray-500">March 10, 2024</span>
+                                <a href="blog-post-market-analysis.html" class="bg-black text-yellow-400 px-4 py-2 rounded-full hover:bg-gray-800 transition-colors font-semibold">Read More</a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+
+                <!-- View All Blog Posts Button -->
+                <div class="text-center mt-12">
+                    <a href="blog-archive.html" class="bg-gradient-to-r from-green-600 to-yellow-500 text-white px-8 py-4 rounded-full font-semibold hover:from-green-700 hover:to-yellow-400 transition-all transform hover:scale-105 shadow-lg inline-block">
+                        View All Blog Posts
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Introduction Section -->
+    <section id="introduction" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto">
+                <div class="text-center mb-16">
+                    <h2 class="text-4xl font-bold text-gray-800 mb-6">The AI Revolution is Here</h2>
+                    <p class="text-xl text-gray-600 leading-relaxed">
+                        Artificial Intelligence is no longer just a buzzword—it's actively reshaping how we buy, sell,
+                        and experience real estate and tourism. At Island Connect AI, we're at the forefront of this transformation.
+                    </p>
+                </div>
+
+                <div class="grid md:grid-cols-3 gap-8 mb-16">
+                    <div class="text-center p-6 bg-gradient-to-br from-green-50 to-yellow-50 rounded-xl">
+                        <div class="text-4xl mb-4">🤖</div>
+                        <h3 class="text-xl font-semibold mb-3">AI-Powered Agents</h3>
+                        <p class="text-gray-600">24/7 intelligent assistants that understand customer needs and provide personalized recommendations</p>
+                    </div>
+                    <div class="text-center p-6 bg-gradient-to-br from-purple-50 to-pink-100 rounded-xl">
+                        <div class="text-4xl mb-4">🌐</div>
+                        <h3 class="text-xl font-semibold mb-3">Smart Websites</h3>
+                        <p class="text-gray-600">Dynamic platforms that adapt to user behavior and market conditions in real-time</p>
+                    </div>
+                    <div class="text-center p-6 bg-gradient-to-br from-green-50 to-teal-100 rounded-xl">
+                        <div class="text-4xl mb-4">📊</div>
+                        <h3 class="text-xl font-semibold mb-3">Data Analytics</h3>
+                        <p class="text-gray-600">Deep insights that drive better decisions and optimize customer experiences</p>
+                    </div>
+                </div>
+
+                <div class="bg-gradient-to-r from-green-50 to-yellow-50 p-8 rounded-2xl">
+                    <h3 class="text-2xl font-bold mb-4 text-green-800">The Game-Changing Impact</h3>
+                    <p class="text-lg text-gray-700 leading-relaxed mb-6">
+                        The integration of AI agents and smart websites is fundamentally altering how businesses operate
+                        in real estate and tourism. From automated property valuations to personalized travel recommendations,
+                        these technologies are creating unprecedented efficiency and customer satisfaction.
+                    </p>
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div>
+                            <h4 class="font-semibold text-green-700 mb-2">For Real Estate:</h4>
+                            <ul class="space-y-2 text-gray-600">
+                                <li>• Instant property matching based on buyer preferences</li>
+                                <li>• Predictive pricing using market data analysis</li>
+                                <li>• Virtual tours with AI-guided explanations</li>
+                                <li>• Automated lead qualification and follow-up</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold text-green-700 mb-2">For Tourism:</h4>
+                            <ul class="space-y-2 text-gray-600">
+                                <li>• Personalized itinerary recommendations</li>
+                                <li>• Dynamic pricing optimization</li>
+                                <li>• Real-time availability and booking</li>
+                                <li>• Language translation and cultural guidance</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Real Estate Section -->
+    <section id="real-estate" class="py-20 bg-gradient-to-br from-green-50 to-yellow-50">
+        <div class="container mx-auto px-4">
+            <div class="max-w-6xl mx-auto">
+                <div class="text-center mb-16">
+                    <h2 class="text-4xl font-bold text-gray-800 mb-6">AI in Real Estate</h2>
+                    <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                        Discover how AI agents are transforming property management, sales, and customer experiences
+                        in the real estate industry.
+                    </p>
+                </div>
+
+                <div class="grid lg:grid-cols-2 gap-12 items-center mb-16">
+                    <div>
+                        <h3 class="text-3xl font-bold text-green-800 mb-6">Smart Property Matching</h3>
+                        <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+                            Our AI agents analyze thousands of property listings in seconds, matching buyers with
+                            their ideal properties based on detailed preferences, budget, location requirements,
+                            and even lifestyle factors.
+                        </p>
+                        <div class="space-y-4">
+                            <div class="flex items-start space-x-3">
+                                <div class="bg-green-500 text-white rounded-full p-2 mt-1">
+                                    <i class="fas fa-check text-sm"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-gray-800">Intelligent Filtering</h4>
+                                    <p class="text-gray-600">AI understands nuanced preferences like "close to good schools" or "quiet neighborhood"</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start space-x-3">
+                                <div class="bg-green-500 text-white rounded-full p-2 mt-1">
+                                    <i class="fas fa-check text-sm"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-gray-800">Predictive Analysis</h4>
+                                    <p class="text-gray-600">Forecasts property value appreciation and market trends</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start space-x-3">
+                                <div class="bg-green-500 text-white rounded-full p-2 mt-1">
+                                    <i class="fas fa-check text-sm"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-gray-800">24/7 Availability</h4>
+                                    <p class="text-gray-600">AI agents work around the clock to find perfect matches</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-white p-6 rounded-2xl shadow-xl">
+                        <div class="bg-gradient-to-br from-green-600 to-yellow-500 text-white p-6 rounded-xl mb-4">
+                            <h4 class="text-lg font-semibold mb-3">AI Property Match Demo</h4>
+                            <div class="space-y-3">
+                                <div class="flex justify-between items-center">
+                                    <span>Client Preferences Analyzed:</span>
+                                    <span class="bg-white/20 px-3 py-1 rounded-full text-sm">847 properties</span>
+                                </div>
+                                <div class="flex justify-between items-center">
+                                    <span>Perfect Matches Found:</span>
+                                    <span class="bg-green-400 px-3 py-1 rounded-full text-sm">23 properties</span>
+                                </div>
+                                <div class="flex justify-between items-center">
+                                    <span>Time Saved:</span>
+                                    <span class="bg-yellow-400 px-3 py-1 rounded-full text-sm">94%</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-6xl mb-2">🏠</div>
+                            <p class="text-gray-600">Interactive property matching visualization</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Real Estate Statistics -->
+                <div class="bg-white p-8 rounded-2xl shadow-lg">
+                    <h3 class="text-2xl font-bold text-center mb-8 text-green-800">Impact Metrics in Real Estate</h3>
+                    <div class="grid md:grid-cols-4 gap-6 text-center">
+                        <div class="p-4">
+                            <div class="text-3xl font-bold text-green-600 mb-2">94%</div>
+                            <div class="text-gray-600">Faster Property Matching</div>
+                        </div>
+                        <div class="p-4">
+                            <div class="text-3xl font-bold text-purple-600 mb-2">78%</div>
+                            <div class="text-gray-600">Higher Lead Conversion</div>
+                        </div>
+                        <div class="p-4">
+                            <div class="text-3xl font-bold text-pink-600 mb-2">65%</div>
+                            <div class="text-gray-600">Reduced Time on Market</div>
+                        </div>
+                        <div class="p-4">
+                            <div class="text-3xl font-bold text-green-600 mb-2">89%</div>
+                            <div class="text-gray-600">Customer Satisfaction</div>
+                        </div>
+                    </div>
+                    <div class="mt-8">
+                        <canvas id="realEstateChart" width="400" height="200"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tourism Section -->
+    <section id="tourism" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="max-w-6xl mx-auto">
+                <div class="text-center mb-16">
+                    <h2 class="text-4xl font-bold text-gray-800 mb-6">AI in Tourism</h2>
+                    <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                        Explore how AI agents are creating personalized travel experiences, optimizing bookings,
+                        and revolutionizing customer service in the tourism industry.
+                    </p>
+                </div>
+
+                <div class="grid lg:grid-cols-2 gap-12 items-center mb-16">
+                    <div class="bg-gradient-to-br from-teal-50 to-blue-100 p-8 rounded-2xl">
+                        <div class="text-center mb-6">
+                            <div class="text-6xl mb-4">✈️</div>
+                            <h3 class="text-2xl font-bold text-teal-800">Personalized Travel Planning</h3>
+                        </div>
+                        <div class="space-y-4">
+                            <div class="bg-white p-4 rounded-lg shadow-md">
+                                <h4 class="font-semibold text-gray-800 mb-2">Smart Itinerary Builder</h4>
+                                <p class="text-gray-600 text-sm">AI creates custom travel plans based on preferences, budget, and travel history</p>
+                            </div>
+                            <div class="bg-white p-4 rounded-lg shadow-md">
+                                <h4 class="font-semibold text-gray-800 mb-2">Real-time Recommendations</h4>
+                                <p class="text-gray-600 text-sm">Suggests activities, restaurants, and experiences based on location and weather</p>
+                            </div>
+                            <div class="bg-white p-4 rounded-lg shadow-md">
+                                <h4 class="font-semibold text-gray-800 mb-2">Language & Cultural Assistant</h4>
+                                <p class="text-gray-600 text-sm">Provides translations, cultural tips, and local etiquette guidance</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <h3 class="text-3xl font-bold text-teal-800 mb-6">Intelligent Travel Companions</h3>
+                        <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+                            Our AI agents act as personal travel assistants, learning from each interaction to provide
+                            increasingly personalized recommendations. They handle everything from booking flights and
+                            hotels to suggesting hidden gems at your destination.
+                        </p>
+                        <div class="space-y-4">
+                            <div class="flex items-center space-x-3">
+                                <div class="bg-teal-500 text-white rounded-full p-2">
+                                    <i class="fas fa-calendar-alt"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold">Dynamic Scheduling</h4>
+                                    <p class="text-gray-600 text-sm">Automatically adjusts plans based on weather, events, and preferences</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center space-x-3">
+                                <div class="bg-blue-500 text-white rounded-full p-2">
+                                    <i class="fas fa-dollar-sign"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold">Price Optimization</h4>
+                                    <p class="text-gray-600 text-sm">Finds the best deals and optimal booking times</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center space-x-3">
+                                <div class="bg-purple-500 text-white rounded-full p-2">
+                                    <i class="fas fa-headset"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold">24/7 Support</h4>
+                                    <p class="text-gray-600 text-sm">Instant assistance in multiple languages</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tourism Statistics -->
+                <div class="bg-gradient-to-br from-teal-50 to-blue-100 p-8 rounded-2xl shadow-lg">
+                    <h3 class="text-2xl font-bold text-center mb-8 text-teal-800">Tourism Industry Transformation</h3>
+                    <div class="grid md:grid-cols-4 gap-6 text-center">
+                        <div class="bg-white p-4 rounded-xl">
+                            <div class="text-3xl font-bold text-teal-600 mb-2">156%</div>
+                            <div class="text-gray-600 text-sm">Booking Efficiency</div>
+                        </div>
+                        <div class="bg-white p-4 rounded-xl">
+                            <div class="text-3xl font-bold text-blue-600 mb-2">89%</div>
+                            <div class="text-gray-600 text-sm">Customer Retention</div>
+                        </div>
+                        <div class="bg-white p-4 rounded-xl">
+                            <div class="text-3xl font-bold text-purple-600 mb-2">73%</div>
+                            <div class="text-gray-600 text-sm">Revenue Growth</div>
+                        </div>
+                        <div class="bg-white p-4 rounded-xl">
+                            <div class="text-3xl font-bold text-green-600 mb-2">95%</div>
+                            <div class="text-gray-600 text-sm">Trip Satisfaction</div>
+                        </div>
+                    </div>
+                    <div class="mt-8">
+                        <canvas id="tourismChart" width="400" height="200"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Case Studies Section -->
+    <section id="case-studies" class="py-20 bg-gradient-to-br from-gray-50 to-blue-50">
+        <div class="container mx-auto px-4">
+            <div class="max-w-6xl mx-auto">
+                <div class="text-center mb-16">
+                    <h2 class="text-4xl font-bold text-gray-800 mb-6">Success Stories</h2>
+                    <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                        Real-world examples of how Island Connect AI's solutions have transformed businesses
+                        in real estate and tourism.
+                    </p>
+                </div>
+
+                <div class="grid lg:grid-cols-2 gap-8">
+                    <!-- Real Estate Case Study -->
+                    <div class="bg-white p-8 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300">
+                        <div class="flex items-center mb-6">
+                            <div class="bg-green-100 p-3 rounded-full mr-4">
+                                <div class="text-2xl">🏢</div>
+                            </div>
+                            <div>
+                                <h3 class="text-2xl font-bold text-gray-800">Luxury Properties Group</h3>
+                                <p class="text-gray-600">High-end real estate agency</p>
+                            </div>
+                        </div>
+
+                        <div class="mb-6">
+                            <h4 class="font-semibold text-green-800 mb-3">The Challenge</h4>
+                            <p class="text-gray-700 mb-4">
+                                Manual property matching was time-consuming, with agents spending 60% of their time
+                                on lead qualification rather than closing deals.
+                            </p>
+
+                            <h4 class="font-semibold text-green-800 mb-3">Our Solution</h4>
+                            <p class="text-gray-700 mb-4">
+                                Implemented AI-powered property matching and automated lead qualification system
+                                with intelligent chatbots for 24/7 customer engagement.
+                            </p>
+
+                            <h4 class="font-semibold text-green-800 mb-3">Results</h4>
+                            <div class="grid grid-cols-2 gap-4">
+                                <div class="bg-green-50 p-4 rounded-lg text-center">
+                                    <div class="text-2xl font-bold text-green-600">94%</div>
+                                    <div class="text-sm text-gray-600">Faster Matching</div>
+                                </div>
+                                <div class="bg-blue-50 p-4 rounded-lg text-center">
+                                    <div class="text-2xl font-bold text-blue-600">156%</div>
+                                    <div class="text-sm text-gray-600">More Closed Deals</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="bg-gray-50 p-4 rounded-lg">
+                            <p class="text-sm text-gray-600 italic">
+                                "The AI system understands our luxury clientele's unique needs better than
+                                many human agents. It's transformed our business completely."
+                            </p>
+                            <p class="text-sm font-semibold mt-2">- Sarah Chen, CEO</p>
+                        </div>
+                    </div>
+
+                    <!-- Tourism Case Study -->
+                    <div class="bg-white p-8 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300">
+                        <div class="flex items-center mb-6">
+                            <div class="bg-teal-100 p-3 rounded-full mr-4">
+                                <div class="text-2xl">🌴</div>
+                            </div>
+                            <div>
+                                <h3 class="text-2xl font-bold text-gray-800">Island Paradise Resorts</h3>
+                                <p class="text-gray-600">Luxury resort chain</p>
+                            </div>
+                        </div>
+
+                        <div class="mb-6">
+                            <h4 class="font-semibold text-teal-800 mb-3">The Challenge</h4>
+                            <p class="text-gray-700 mb-4">
+                                High customer service demands during peak seasons, language barriers with international
+                                guests, and complex booking optimization across multiple properties.
+                            </p>
+
+                            <h4 class="font-semibold text-teal-800 mb-3">Our Solution</h4>
+                            <p class="text-gray-700 mb-4">
+                                Deployed multilingual AI concierge service, dynamic pricing optimization, and
+                                personalized itinerary planning across all resort locations.
+                            </p>
+
+                            <h4 class="font-semibold text-teal-800 mb-3">Results</h4>
+                            <div class="grid grid-cols-2 gap-4">
+                                <div class="bg-purple-50 p-4 rounded-lg text-center">
+                                    <div class="text-2xl font-bold text-purple-600">89%</div>
+                                    <div class="text-sm text-gray-600">Guest Satisfaction</div>
+                                </div>
+                                <div class="bg-orange-50 p-4 rounded-lg text-center">
+                                    <div class="text-2xl font-bold text-orange-600">73%</div>
+                                    <div class="text-sm text-gray-600">Revenue Increase</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="bg-gray-50 p-4 rounded-lg">
+                            <p class="text-sm text-gray-600 italic">
+                                "Our AI concierge knows our guests better than we do. It anticipates needs
+                                and creates magical experiences that keep them coming back."
+                            </p>
+                            <p class="text-sm font-semibold mt-2">- Marco Rodriguez, Resort Manager</p>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Future Trends Section -->
+    <section id="future" class="py-20 text-white" style="background: linear-gradient(135deg, #000000 0%, #003a18 35%, #006B2A 65%, #009B3A 100%);">
+        <div class="container mx-auto px-4">
+            <div class="max-w-6xl mx-auto">
+                <div class="text-center mb-16">
+                    <h2 class="text-4xl font-bold mb-6">The Future of AI in <span class="text-yellow-400">Real Estate & Tourism</span></h2>
+                    <p class="text-xl max-w-3xl mx-auto" style="color: rgba(255,255,255,0.85);">
+                        What's next for AI agents and smart websites? Explore emerging trends that will
+                        reshape these industries in the coming years.
+                    </p>
+                </div>
+
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="p-6 rounded-2xl border border-green-500/40 hover:border-yellow-400/60 transition-all duration-300 hover:-translate-y-1" style="background: rgba(0,155,58,0.12); backdrop-filter: blur(12px);">
+                        <div class="text-4xl mb-4">🧠</div>
+                        <h3 class="text-xl font-semibold mb-3">Advanced AI Reasoning</h3>
+                        <p class="opacity-90">
+                            Next-generation AI agents will understand complex human emotions and preferences,
+                            making even more nuanced recommendations.
+                        </p>
+                    </div>
+
+                    <div class="p-6 rounded-2xl border border-green-500/40 hover:border-yellow-400/60 transition-all duration-300 hover:-translate-y-1" style="background: rgba(0,155,58,0.12); backdrop-filter: blur(12px);">
+                        <div class="text-4xl mb-4">🏠</div>
+                        <h3 class="text-xl font-semibold mb-3">Virtual Reality Integration</h3>
+                        <p class="opacity-90">
+                            AI-powered VR tours will allow customers to experience properties and destinations
+                            before making decisions.
+                        </p>
+                    </div>
+
+                    <div class="p-6 rounded-2xl border border-green-500/40 hover:border-yellow-400/60 transition-all duration-300 hover:-translate-y-1" style="background: rgba(0,155,58,0.12); backdrop-filter: blur(12px);">
+                        <div class="text-4xl mb-4">🔗</div>
+                        <h3 class="text-xl font-semibold mb-3">Blockchain Integration</h3>
+                        <p class="opacity-90">
+                            Smart contracts will automate property transactions and travel bookings with
+                            AI-verified conditions.
+                        </p>
+                    </div>
+
+                    <div class="p-6 rounded-2xl border border-green-500/40 hover:border-yellow-400/60 transition-all duration-300 hover:-translate-y-1" style="background: rgba(0,155,58,0.12); backdrop-filter: blur(12px);">
+                        <div class="text-4xl mb-4">🌱</div>
+                        <h3 class="text-xl font-semibold mb-3">Sustainability Focus</h3>
+                        <p class="opacity-90">
+                            AI will optimize for eco-friendly options, helping businesses meet sustainability
+                            goals while reducing costs.
+                        </p>
+                    </div>
+
+                    <div class="p-6 rounded-2xl border border-green-500/40 hover:border-yellow-400/60 transition-all duration-300 hover:-translate-y-1" style="background: rgba(0,155,58,0.12); backdrop-filter: blur(12px);">
+                        <div class="text-4xl mb-4">🤝</div>
+                        <h3 class="text-xl font-semibold mb-3">Human-AI Collaboration</h3>
+                        <p class="opacity-90">
+                            The future isn't about replacing humans—it's about AI and humans working
+                            together for better outcomes.
+                        </p>
+                    </div>
+
+                    <div class="p-6 rounded-2xl border border-green-500/40 hover:border-yellow-400/60 transition-all duration-300 hover:-translate-y-1" style="background: rgba(0,155,58,0.12); backdrop-filter: blur(12px);">
+                        <div class="text-4xl mb-4">⚡</div>
+                        <h3 class="text-xl font-semibold mb-3">Real-time Adaptation</h3>
+                        <p class="opacity-90">
+                            AI systems will adapt instantly to market changes, weather conditions,
+                            and customer behavior patterns.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="mt-12 text-center">
+                    <div class="p-8 rounded-2xl max-w-4xl mx-auto border border-yellow-400/30" style="background: rgba(0,0,0,0.45); backdrop-filter: blur(16px);">
+                        <h3 class="text-2xl font-bold mb-4 text-yellow-400">The Island Connect AI Advantage</h3>
+                        <p class="text-lg opacity-90 mb-6">
+                            As these technologies evolve, Island Connect AI remains committed to bringing
+                            the most advanced solutions to real estate and tourism businesses. We're not just
+                            following trends—we're creating them.
+                        </p>
+                        <a href="https://islandconnect.fillout.com/getstared" target="_blank" class="bg-yellow-400 text-black px-8 py-4 rounded-full font-semibold hover:bg-yellow-300 transition-all transform hover:scale-105 shadow-lg flex items-center justify-center">Start Your AI Journey</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="py-20 bg-gray-900 text-white">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto text-center">
+                <h2 class="text-4xl font-bold mb-6">Ready to Transform Your Business?</h2>
+                <p class="text-xl mb-8 opacity-90">
+                    Join the AI revolution and discover how Island Connect AI can revolutionize your
+                    real estate or tourism business.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="https://islandconnect.fillout.com/getstared" target="_blank" class="bg-green-600 text-white px-8 py-4 rounded-full font-semibold hover:bg-green-700 transition-all transform hover:scale-105 flex items-center justify-center">Get Started Today</a>
+                    <a href="https://islandconnectai.com" target="_blank" class="border-2 border-white text-white px-8 py-4 rounded-full font-semibold hover:bg-white hover:text-gray-900 transition-all flex items-center justify-center">Learn More</a>
+                </div>
+
+                <!-- Contact Info -->
+                <div class="mt-12 grid md:grid-cols-3 gap-8 text-center">
+                    <div>
+                        <div class="text-3xl mb-3">📧</div>
+                        <h4 class="font-semibold mb-2">Email Us</h4>
+                        <p class="text-sm opacity-75">info@islandconnectai.com</p>
+                    </div>
+                    <div>
+                        <div class="text-3xl mb-3">📱</div>
+                        <h4 class="font-semibold mb-2">Call Us</h4>
+                        <p class="text-sm opacity-75">(876) 463-9209</p>
+                    </div>
+                    <div>
+                        <div class="text-3xl mb-3">🏢</div>
+                        <h4 class="font-semibold mb-2">Visit Us</h4>
+                        <p class="text-sm opacity-75">Montego Bay, St James, Jamaica</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+<?php get_footer(); ?>
