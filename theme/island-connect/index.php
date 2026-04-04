@@ -1,10 +1,11 @@
-<?php
-/**
- * Template Name: Island Connect Landing Page
- */
-get_header(); ?>
-<main id="site-main" class="site-main">
-    <?php if (have_posts()) : while (have_posts()) : the_post(); the_content(); endwhile; endif; ?>
+<?php get_header(); ?>
+<main>
+    <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+        <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+            <?php the_content(); ?>
+        </article>
+    <?php endwhile; endif; ?>
+
     <!-- Hero Section -->
     <section class="relative overflow-hidden bg-gradient-to-r from-green-800 via-yellow-500 to-black text-white py-20">
         <div class="absolute inset-0 bg-black/20"></div>
