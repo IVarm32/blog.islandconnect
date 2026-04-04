@@ -4,14 +4,7 @@
  */
 get_header(); ?>
 <main id="site-main" class="site-main">
-    <?php
-    if ( have_posts() ) :
-        while ( have_posts() ) :
-            the_post();
-            the_content();
-        endwhile;
-    endif;
-    ?>
+    <?php if (have_posts()) : while (have_posts()) : the_post(); the_content(); endwhile; endif; ?>
     <!-- Hero Section -->
     <section class="relative overflow-hidden bg-gradient-to-r from-green-800 via-yellow-500 to-black text-white py-20">
         <div class="absolute inset-0 bg-black/20"></div>
