@@ -51,3 +51,31 @@
  HTTP  4/2/2026 6:12:22 PM ::1 Returned 200 in 5 ms
  HTTP  4/2/2026 6:12:23 PM ::1 GET /js/main.js
  HTTP  4/2/2026 6:12:23 PM ::1 Returned 200 in 2 ms
+ HTTP  4/4/2026 5:47:40 AM ::1 GET /
+ HTTP  4/4/2026 5:47:40 AM ::1 Returned 200 in 79 ms
+ HTTP  4/4/2026 5:47:40 AM ::1 GET /css/style.css
+ HTTP  4/4/2026 5:47:40 AM ::1 Returned 200 in 10 ms
+ HTTP  4/4/2026 5:47:41 AM ::1 GET /js/main.js
+ HTTP  4/4/2026 5:47:41 AM ::1 Returned 200 in 4 ms
+ HTTP  4/4/2026 5:47:42 AM ::1 GET /blog-post-innovative-tourism-strategies.html
+ HTTP  4/4/2026 5:47:42 AM ::1 Returned 301 in 3 ms
+ HTTP  4/4/2026 5:47:42 AM ::1 GET /blog-post-innovative-tourism-strategies
+ HTTP  4/4/2026 5:47:42 AM ::1 Returned 200 in 93 ms
+ HTTP  4/4/2026 5:47:42 AM ::1 GET /css/style.css
+ HTTP  4/4/2026 5:47:42 AM ::1 Returned 304 in 6 ms
+ HTTP  4/4/2026 5:47:42 AM ::1 GET /js/main.js
+ HTTP  4/4/2026 5:47:42 AM ::1 Returned 304 in 2 ms
+ HTTP  4/4/2026 5:49:20 AM ::1 GET /
+ HTTP  4/4/2026 5:49:20 AM ::1 Returned 200 in 2 ms
+ HTTP  4/4/2026 5:49:20 AM ::1 GET /css/style.css
+ HTTP  4/4/2026 5:49:20 AM ::1 Returned 200 in 6 ms
+ HTTP  4/4/2026 5:49:21 AM ::1 GET /js/main.js
+ HTTP  4/4/2026 5:49:21 AM ::1 Returned 200 in 1 ms
+ HTTP  4/4/2026 5:49:21 AM ::1 GET /blog-post-innovative-tourism-strategies.html
+ HTTP  4/4/2026 5:49:21 AM ::1 Returned 301 in 1 ms
+ HTTP  4/4/2026 5:49:21 AM ::1 GET /blog-post-innovative-tourism-strategies
+ HTTP  4/4/2026 5:49:21 AM ::1 Returned 200 in 3 ms
+ HTTP  4/4/2026 5:49:21 AM ::1 GET /css/style.css
+ HTTP  4/4/2026 5:49:21 AM ::1 Returned 304 in 7 ms
+ HTTP  4/4/2026 5:49:21 AM ::1 GET /js/main.js
+ HTTP  4/4/2026 5:49:21 AM ::1 Returned 304 in 2 ms
