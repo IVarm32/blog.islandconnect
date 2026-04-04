@@ -1,24 +1,17 @@
 <?php
 /**
  * Template Name: Island Connect Landing Page
- *
- * @package IslandConnectChild
  */
-
 get_header(); ?>
-
 <main id="site-main" class="site-main">
     <?php
     if ( have_posts() ) :
         while ( have_posts() ) :
             the_post();
-            // This allows Elementor content to be injected if the page is edited with Elementor
             the_content();
         endwhile;
     endif;
     ?>
-
-    <!-- Original HTML Content -->
     <!-- Hero Section -->
     <section class="relative overflow-hidden bg-gradient-to-r from-green-800 via-yellow-500 to-black text-white py-20">
         <div class="absolute inset-0 bg-black/20"></div>
@@ -710,5 +703,4 @@ get_header(); ?>
         </div>
     </section>
 </main>
-
 <?php get_footer(); ?>
