@@ -5,7 +5,7 @@ This theme is designed as a child theme for the **Hello Elementor** parent theme
 ## Installation Steps
 1. Ensure the **Hello Elementor** theme is installed and active on your WordPress site.
 2. Install the **Elementor** plugin.
-3. Upload the `island-connect-child` folder to your WordPress `wp-content/themes/` directory.
+3. Upload the `island-connect-child` folder (found in the `wordpress-theme/` directory of this repository) to your WordPress `wp-content/themes/` directory.
 4. Go to **Appearance > Themes** and activate **Island Connect Child**.
 
 ## Setting up the Homepage
