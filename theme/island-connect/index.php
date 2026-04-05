@@ -62,7 +62,7 @@
                             </p>
                             <div class="flex justify-between items-center">
                                 <span class="text-sm text-gray-500">April 12, 2024</span>
-                                <a href="blog-post-innovative-tourism-strategies.html" class="bg-yellow-500 text-black px-4 py-2 rounded-full hover:bg-yellow-400 transition-colors font-semibold">Read More</a>
+                                <a href="<?php echo esc_url( home_url( "/blog-post-innovative-tourism-strategies/" ) ); ?>" class="bg-yellow-500 text-black px-4 py-2 rounded-full hover:bg-yellow-400 transition-colors font-semibold">Read More</a>
                             </div>
                         </div>
                     </article>
@@ -82,7 +82,7 @@
                             </p>
                             <div class="flex justify-between items-center">
                                 <span class="text-sm text-gray-500">March 22, 2024</span>
-                                <a href="blog-post-ai-property-matching.html" class="bg-green-600 text-white px-4 py-2 rounded-full hover:bg-green-700 transition-colors font-semibold">Read More</a>
+                                <a href="<?php echo esc_url( home_url( "/blog-post-ai-property-matching/" ) ); ?>" class="bg-green-600 text-white px-4 py-2 rounded-full hover:bg-green-700 transition-colors font-semibold">Read More</a>
                             </div>
                         </div>
                     </article>
@@ -102,7 +102,7 @@
                             </p>
                             <div class="flex justify-between items-center">
                                 <span class="text-sm text-gray-500">March 20, 2024</span>
-                                <a href="blog-post-smart-tourism.html" class="bg-yellow-500 text-black px-4 py-2 rounded-full hover:bg-yellow-400 transition-colors font-semibold" aria-label="Read more about Smart Tourism in Jamaica">Read More</a>
+                                <a href="<?php echo esc_url( home_url( "/blog-post-smart-tourism/" ) ); ?>" class="bg-yellow-500 text-black px-4 py-2 rounded-full hover:bg-yellow-400 transition-colors font-semibold" aria-label="Read more about Smart Tourism in Jamaica">Read More</a>
                             </div>
                         </div>
                     </article>
@@ -122,7 +122,7 @@
                             </p>
                             <div class="flex justify-between items-center">
                                 <span class="text-sm text-gray-500">March 18, 2024</span>
-                                <a href="blog-post-ai-revolution.html" class="bg-black text-yellow-400 px-4 py-2 rounded-full hover:bg-gray-800 transition-colors font-semibold">Read More</a>
+                                <a href="<?php echo esc_url( home_url( "/blog-post-ai-revolution/" ) ); ?>" class="bg-black text-yellow-400 px-4 py-2 rounded-full hover:bg-gray-800 transition-colors font-semibold">Read More</a>
                             </div>
                         </div>
                     </article>
@@ -142,7 +142,7 @@
                             </p>
                             <div class="flex justify-between items-center">
                                 <span class="text-sm text-gray-500">March 15, 2024</span>
-                                <a href="blog-post-luxury-properties.html" class="bg-green-600 text-white px-4 py-2 rounded-full hover:bg-green-700 transition-colors font-semibold inline-block">Read More</a>
+                                <a href="<?php echo esc_url( home_url( "/blog-post-luxury-properties/" ) ); ?>" class="bg-green-600 text-white px-4 py-2 rounded-full hover:bg-green-700 transition-colors font-semibold inline-block">Read More</a>
                             </div>
                         </div>
                     </article>
@@ -162,7 +162,7 @@
                             </p>
                             <div class="flex justify-between items-center">
                                 <span class="text-sm text-gray-500">March 12, 2024</span>
-                                <a href="blog-post-tourism-recovery.html" class="bg-yellow-500 text-black px-4 py-2 rounded-full hover:bg-yellow-400 transition-colors font-semibold" aria-label="Read more about Jamaican Tourism Recovery">Read More</a>
+                                <a href="<?php echo esc_url( home_url( "/blog-post-tourism-recovery/" ) ); ?>" class="bg-yellow-500 text-black px-4 py-2 rounded-full hover:bg-yellow-400 transition-colors font-semibold" aria-label="Read more about Jamaican Tourism Recovery">Read More</a>
                             </div>
                         </div>
                     </article>
@@ -182,7 +182,7 @@
                             </p>
                             <div class="flex justify-between items-center">
                                 <span class="text-sm text-gray-500">March 10, 2024</span>
-                                <a href="blog-post-market-analysis.html" class="bg-black text-yellow-400 px-4 py-2 rounded-full hover:bg-gray-800 transition-colors font-semibold">Read More</a>
+                                <a href="<?php echo esc_url( home_url( "/blog-post-market-analysis/" ) ); ?>" class="bg-black text-yellow-400 px-4 py-2 rounded-full hover:bg-gray-800 transition-colors font-semibold">Read More</a>
                             </div>
                         </div>
                     </article>
@@ -190,7 +190,7 @@
 
                 <!-- View All Blog Posts Button -->
                 <div class="text-center mt-12">
-                    <a href="blog-archive.html" class="bg-gradient-to-r from-green-600 to-yellow-500 text-white px-8 py-4 rounded-full font-semibold hover:from-green-700 hover:to-yellow-400 transition-all transform hover:scale-105 shadow-lg inline-block">
+                    <a href="<?php echo esc_url( get_post_type_archive_link( "post" ) ); ?>" class="bg-gradient-to-r from-green-600 to-yellow-500 text-white px-8 py-4 rounded-full font-semibold hover:from-green-700 hover:to-yellow-400 transition-all transform hover:scale-105 shadow-lg inline-block">
                         View All Blog Posts
                     </a>
                 </div>
